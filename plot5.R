@@ -8,7 +8,7 @@ vehicleSCC <- SCC %>%
 vehicleSCCcodes <- pull(vehicleSCC, SCC)
 
 
-# filter NEI based on SCC codes from vehicleSCCcodes
+# filter NEI based on SCC codes from vehicleSCCcodes and fips code for Baltimore City
 vehicleBaltNEI <- NEI %>%
   filter(SCC %in% vehicleSCCcodes) %>%
   filter(fips == 24510)
